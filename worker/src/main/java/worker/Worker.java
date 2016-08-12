@@ -54,6 +54,7 @@ class Worker {
         break;
       } catch (JedisConnectionException e) {
         System.err.println("Waiting for redis");
+        e.printStackTrace();
         sleep(1000);
       }
     }
